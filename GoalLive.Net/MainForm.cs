@@ -11,9 +11,9 @@ namespace GoalLive.Net
     {
         public static void ShowMenu()
         {
-            Console.WriteLine("1. Execute a chamada à API");
-            Console.WriteLine("2. Outra opção");
-            Console.WriteLine("3. Sair");
+            Console.WriteLine("1. API Check");
+            Console.WriteLine("2. Other Option");
+            Console.WriteLine("3. Exit");
         }
 
         public static void Main()
@@ -24,34 +24,35 @@ namespace GoalLive.Net
             {
                 Console.WriteLine("Hello Everyone!!");
                 Console.WriteLine("I'm GoalLive.Net");
+                Console.WriteLine(); // Add other other line to improve formating
                 ShowMenu();
-                Console.Write("Escolha uma opção: ");
+                Console.Write("Choose one option: ");
                 string userInput = Console.ReadLine();
 
                 switch (userInput)
                 {
                     case "1":
                         // Chame o método desejado ou insira o código aqui
-                        Console.WriteLine("Chamando a API...");
+                        Console.WriteLine("Checking API...");
                         Program.Main().GetAwaiter().GetResult();
                         break;
 
                     case "2":
                         // Adicione mais opções conforme necessário
-                        Console.WriteLine("Opção 2 escolhida.");
+                        Console.WriteLine("Option 2.");
                         break;
 
                     case "3":
                         exit = true;
-                        Console.WriteLine("Saindo do programa.");
+                        Console.WriteLine("Leaving the program...");
                         break;
 
                     default:
-                        Console.WriteLine("Opção inválida. Tente novamente.");
+                        Console.WriteLine("Invalid Option. Try Again.");
                         break;
                 }
 
-                Console.WriteLine(); // Adiciona uma linha em branco para melhorar a formatação na console
+                Console.WriteLine(); // Add other other line to improve formating
 
             } while (!exit);
         }
