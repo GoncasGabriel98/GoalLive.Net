@@ -2,11 +2,11 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-class Program
+public class Program
 {
-    static async Task Main()
+    public static async Task Main()
     {
-        string apiUrl = "https://api.sofascore.com/api/v1/sport/football/scheduled-events/"; // SofaScore API
+        string apiUrl = "https://api.sofascore.com/api/v1/sport/football/scheduled-events/2024-01-09"; // SofaScore API
 
         try
         {
