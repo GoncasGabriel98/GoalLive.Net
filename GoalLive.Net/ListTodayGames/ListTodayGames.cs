@@ -47,6 +47,8 @@ namespace GoalLive.Net.ListTodayGames
                             var homeScoreTeam = eventData.HomeScore?.Current;
                             var awayTeamName = eventData.AwayTeam?.Name;
                             var awayScoreTeam = eventData.AwayScore?.Current;
+                            var Round = eventData.RoundInfo?.Round;
+                            var GameStatus = eventData.Status?.Description;
 
                             // Print the extracted fields
                             Console.WriteLine($"{uniqueTournamentName}");
@@ -56,6 +58,9 @@ namespace GoalLive.Net.ListTodayGames
                                 Console.WriteLine($"{homeTeamName} {homeScoreTeam} VS {awayScoreTeam} {awayTeamName}");
                             else
                                 Console.WriteLine($"{homeTeamName} VS {awayTeamName}");
+                            
+                            Console.WriteLine($"Round {Round}");
+                            Console.WriteLine($"Status {GameStatus}");
 
                             Console.WriteLine();
                         }

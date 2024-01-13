@@ -34,19 +34,19 @@ public class MainForm
             {
                 case "1":
                     Console.WriteLine("Checking API...");
-                    Program.Main();
+                    _ = Program.Main();
                     Console.Clear();
                     break;
 
                 case "2":
                     Console.WriteLine("Option 2.");
-                    GoalLive.Net.ListTodayGames.ListTodayGames.Main();
+                    _ = GoalLive.Net.ListTodayGames.ListTodayGames.Main();
                     Console.Clear();
                     break;
 
                 case "3":
                     Console.WriteLine("Option 3.");
-                    GoalLive.Net.ListTodayGames.ListTodayGamesByLeague.Main();
+                    _ = GoalLive.Net.ListTodayGames.ListTodayGamesByLeague.Main();
                     Console.Clear();
                     break;
 

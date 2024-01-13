@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -41,10 +42,8 @@ namespace GoalLive.Net.ListTodayGames
           
             // Base URl
             string baseUrl = "https://api.sofascore.com/api/v1/sport/football/scheduled-events/";
-
             // Get Date
             string date = DateTime.Now.ToString("yyyy-MM-dd");
-
             // Join base url string and Date
             string apiUrl = $"{baseUrl}{date}";
 
@@ -52,7 +51,6 @@ namespace GoalLive.Net.ListTodayGames
             {
                 // Make the HTTP request
                 string json = await GetJsonFromApi(apiUrl);
-
                 // Deserialize the JSON and extract the desired fields
                 var events = JsonConvert.DeserializeObject<RootObject>(json)?.Events;
 
@@ -63,26 +61,26 @@ namespace GoalLive.Net.ListTodayGames
                         // Extract the desired fields
                         var uniqueTournamentName = eventData.Tournament?.UniqueTournament?.Name;
 
-                        if (leagueConvert == uniqueTournamentName)
+                        if (leagueConvert == uniqueTournamentName.ToString())
                         {
-                            var sportName = eventData.Tournament?.Category?.Sport?.Name;
                             var startTimestamp = eventData.StartTimestamp;
                             var homeTeamName = eventData.HomeTeam?.Name;
                             var homeScoreTeam = eventData.HomeScore?.Current;
                             var awayTeamName = eventData.AwayTeam?.Name;
                             var awayScoreTeam = eventData.AwayScore?.Current;
+                            var Round = eventData.RoundInfo?.Round;
+                            var GameStatus = eventData.Status?.Description;
 
                             // Print the extracted fields
-                            Console.WriteLine($"{uniqueTournamentName}");
-
                             if (homeScoreTeam != null && awayScoreTeam != null)
                                 Console.WriteLine($"{homeTeamName} {homeScoreTeam} VS {awayScoreTeam} {awayTeamName}");
                             else
                                 Console.WriteLine($"{homeTeamName} VS {awayTeamName}");
 
+                            Console.WriteLine($"Round {Round}");
+                            Console.WriteLine($"Status {GameStatus}");
                             Console.WriteLine();
                         }
-
                     }
                 }
                 else
@@ -126,7 +124,6 @@ namespace GoalLive.Net.ListTodayGames
                     Console.Clear();
                     break;
             }
-
             return leagueconvert;
         }
 
