@@ -12,7 +12,7 @@ public class MainForm
         Console.WriteLine("1. API Check");
         Console.WriteLine("2. List Today Games");
         Console.WriteLine("3. List Today Games By League");
-        Console.WriteLine("4. Liga Portugal Betclic Table");
+        Console.WriteLine("4. Table");
         Console.WriteLine("5. Exit");
     }
 
@@ -53,7 +53,7 @@ public class MainForm
 
                 case "4":
                     Console.WriteLine("Option 4.");
-                    _ = GoalLive.Net.LeagueTable.LigaPortugalBetclicTable.Main();
+                    GoalLive.Net.LeagueTable.LeagueForm.MainForm();
                     Console.Clear();
                     break;
 

@@ -8,12 +8,13 @@ using Newtonsoft.Json;
 
 namespace GoalLive.Net.LeagueTable
 {
-    class LigaPortugalBetclicTable
+    class PremierLeagueTable
     {
         public static async Task Main()
         {
             Console.Clear();
-            string apiUrl = "https://api.sofascore.com/api/v1/tournament/52/season/52769/standings/total";
+            string apiUrl = "https://api.sofascore.com/api/v1/unique-tournament/17/season/52186/standings/total";
+        
             try
             {
                 // Make the HTTP request
@@ -35,7 +36,7 @@ namespace GoalLive.Net.LeagueTable
                         var Matches = row?.Matches;
 
                         // Print row data
-                        if(Give != null)
+                        if (Give != null)
                             PrintRow(Position.ToString(), Team, Matches.ToString(), Points.ToString(), Give);
                         else
                             PrintRow(Position.ToString(), Team, Matches.ToString(), Points.ToString());
@@ -87,12 +88,12 @@ namespace GoalLive.Net.LeagueTable
         static void PrintRow(params string[] values)
         {
             int columnWidth = 5;
-            int columnWidth1 = 20;
+            int columnWidth1 = 25;
             int i = 0;
             // Print each value with appropriate spacing
             foreach (var value in values)
             {
-                if(i != 1)
+                if (i != 1)
                     Console.Write(value.PadRight(columnWidth));
                 else
                     Console.Write(value.PadRight(columnWidth1));
