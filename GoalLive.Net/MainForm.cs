@@ -12,7 +12,8 @@ public class MainForm
         Console.WriteLine("1. API Check");
         Console.WriteLine("2. List Today Games");
         Console.WriteLine("3. List Today Games By League");
-        Console.WriteLine("4. Exit");
+        Console.WriteLine("4. Liga Portugal Betclic Table");
+        Console.WriteLine("5. Exit");
     }
 
     // Main method to execute the program
@@ -51,6 +52,12 @@ public class MainForm
                     break;
 
                 case "4":
+                    Console.WriteLine("Option 4.");
+                    _ = GoalLive.Net.LeagueTable.LigaPortugalBetclicTable.Main();
+                    Console.Clear();
+                    break;
+
+                case "5":
                     exit = true;
                     Console.WriteLine("Leaving the program...");
                     break;
