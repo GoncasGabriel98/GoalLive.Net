@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 public class MainForm
 {
+    // Display the main menu options
     public static void ShowMenu()
     {
         Console.WriteLine("1. API Check");
@@ -14,6 +15,7 @@ public class MainForm
         Console.WriteLine("4. Exit");
     }
 
+    // Main method to execute the program
     public static void Main()
     {
         bool exit = false;
@@ -23,7 +25,7 @@ public class MainForm
             Console.Clear();
             Console.WriteLine("Hello Everyone!!");
             Console.WriteLine("I'm GoalLive.Net");
-            Console.WriteLine(); // Add other other line to improve formating
+            Console.WriteLine(); // Add another line to improve formatting
             ShowMenu();
             Console.Write("Choose one option: ");
             string userInput = Console.ReadLine();
@@ -56,10 +58,10 @@ public class MainForm
                 default:
                     Console.WriteLine("Invalid Option. Try Again.");
                     break;
-            }         
-            Console.WriteLine(); // Add other other line to improve formating
-            Console.ReadLine(); // Pausa antes de limpar a tela
-            Console.Clear(); // Limpar a tela após o switch
+            }
+            Console.WriteLine(); // Add another line to improve formatting
+            Console.ReadLine(); // Pause before clearing the screen
+            Console.Clear(); // Clear the screen after the switch
 
         } while (!exit);
     }
