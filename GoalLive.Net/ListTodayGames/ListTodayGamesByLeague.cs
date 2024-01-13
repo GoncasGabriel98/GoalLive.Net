@@ -22,6 +22,7 @@ namespace GoalLive.Net.ListTodayGames
 
         public static async Task Main()
         {
+            Console.Clear();
             Console.WriteLine("Choose the league you want:");
             Console.WriteLine(); // Add other other line to improve formating
             ShowMenu();

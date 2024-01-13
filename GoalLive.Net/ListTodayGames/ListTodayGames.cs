@@ -11,6 +11,7 @@ namespace GoalLive.Net.ListTodayGames
     {
         public static async Task Main()
         {
+            Console.Clear();
             List<string> League = new List<string> { "Premier League", "LaLiga", "Serie A", "Ligue 1", "Liga Portugal Betclic" };
 
 

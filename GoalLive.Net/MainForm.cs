@@ -20,6 +20,7 @@ public class MainForm
 
         do
         {
+            Console.Clear();
             Console.WriteLine("Hello Everyone!!");
             Console.WriteLine("I'm GoalLive.Net");
             Console.WriteLine(); // Add other other line to improve formating
@@ -31,7 +32,7 @@ public class MainForm
             {
                 case "1":
                     Console.WriteLine("Checking API...");
-                    Program.Main().GetAwaiter().GetResult();
+                    Program.Main();
                     Console.Clear();
                     break;
 
@@ -50,16 +51,15 @@ public class MainForm
                 case "4":
                     exit = true;
                     Console.WriteLine("Leaving the program...");
-                    Console.Clear();
                     break;
 
                 default:
                     Console.WriteLine("Invalid Option. Try Again.");
-                    Console.Clear();
                     break;
-            }
-
+            }         
             Console.WriteLine(); // Add other other line to improve formating
+            Console.ReadLine(); // Pausa antes de limpar a tela
+            Console.Clear(); // Limpar a tela após o switch
 
         } while (!exit);
     }
