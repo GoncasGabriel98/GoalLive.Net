@@ -27,3 +27,6 @@ C:\Users\gonca\Source\Repos\GoncasGabriel98\GoalLive.Net\GoalLive.Net\obj\Debug\
 C:\Users\gonca\Source\Repos\GoncasGabriel98\GoalLive.Net\GoalLive.Net\obj\Debug\net8.0\GoalLive.Net.pdb
 C:\Users\gonca\Source\Repos\GoncasGabriel98\GoalLive.Net\GoalLive.Net\obj\Debug\net8.0\GoalLive.Net.genruntimeconfig.cache
 C:\Users\gonca\Source\Repos\GoncasGabriel98\GoalLive.Net\GoalLive.Net\obj\Debug\net8.0\ref\GoalLive.Net.dll
+C:\Users\gonca\source\repos\GoncasGabriel98\GoalLive.Net\GoalLive.Net\obj\Debug\net8.0\GoalLive.Net.csproj.AssemblyReference.cache
+C:\Users\gonca\source\repos\GoncasGabriel98\GoalLive.Net\GoalLive.Net\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\gonca\source\repos\GoncasGabriel98\GoalLive.Net\GoalLive.Net\obj\Debug\net8.0\GoalLive.Net.csproj.CopyComplete

@@ -4,57 +4,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoalLive.Net
+public class MainForm
 {
-
-    public class MainForm
+    public static void ShowMenu()
     {
-        public static void ShowMenu()
-        {
-            Console.WriteLine("1. API Check");
-            Console.WriteLine("2. Other Option");
-            Console.WriteLine("3. Exit");
-        }
+        Console.WriteLine("1. API Check");
+        Console.WriteLine("2. List Today Games");
+        Console.WriteLine("3. List Today Games By League");
+        Console.WriteLine("4. Exit");
+    }
 
-        public static void Main()
-        {
-            bool exit = false;
+    public static void Main()
+    {
+        bool exit = false;
 
-            do
+        do
+        {
+            Console.WriteLine("Hello Everyone!!");
+            Console.WriteLine("I'm GoalLive.Net");
+            Console.WriteLine(); // Add other other line to improve formating
+            ShowMenu();
+            Console.Write("Choose one option: ");
+            string userInput = Console.ReadLine();
+
+            switch (userInput)
             {
-                Console.WriteLine("Hello Everyone!!");
-                Console.WriteLine("I'm GoalLive.Net");
-                Console.WriteLine(); // Add other other line to improve formating
-                ShowMenu();
-                Console.Write("Choose one option: ");
-                string userInput = Console.ReadLine();
+                case "1":
+                    Console.WriteLine("Checking API...");
+                    Program.Main().GetAwaiter().GetResult();
+                    Console.Clear();
+                    break;
 
-                switch (userInput)
-                {
-                    case "1":
-                        // Chame o método desejado ou insira o código aqui
-                        Console.WriteLine("Checking API...");
-                        Program.Main().GetAwaiter().GetResult();
-                        break;
+                case "2":
+                    Console.WriteLine("Option 2.");
+                    GoalLive.Net.ListTodayGames.ListTodayGames.Main();
+                    Console.Clear();
+                    break;
 
-                    case "2":
-                        // Adicione mais opções conforme necessário
-                        Console.WriteLine("Option 2.");
-                        break;
+                case "3":
+                    Console.WriteLine("Option 3.");
+                    GoalLive.Net.ListTodayGames.ListTodayGamesByLeague.Main();
+                    Console.Clear();
+                    break;
 
-                    case "3":
-                        exit = true;
-                        Console.WriteLine("Leaving the program...");
-                        break;
+                case "4":
+                    exit = true;
+                    Console.WriteLine("Leaving the program...");
+                    Console.Clear();
+                    break;
 
-                    default:
-                        Console.WriteLine("Invalid Option. Try Again.");
-                        break;
-                }
+                default:
+                    Console.WriteLine("Invalid Option. Try Again.");
+                    Console.Clear();
+                    break;
+            }
 
-                Console.WriteLine(); // Add other other line to improve formating
+            Console.WriteLine(); // Add other other line to improve formating
 
-            } while (!exit);
-        }
+        } while (!exit);
     }
 }
