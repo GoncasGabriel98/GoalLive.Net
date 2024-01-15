@@ -147,6 +147,7 @@ namespace GoalLive.Net.LeagueTable
         public List<Row> Rows { get; set; }
         public int Id { get; set; }
         public int UpdatedAtTimestamp { get; set; }
+        public IEnumerable<object> Events { get; internal set; }
     }
 
     public class NameTranslation4

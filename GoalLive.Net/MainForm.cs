@@ -13,7 +13,9 @@ public class MainForm
         Console.WriteLine("2. List Today Games");
         Console.WriteLine("3. List Today Games By League");
         Console.WriteLine("4. Table");
-        Console.WriteLine("5. Exit");
+        Console.WriteLine("5. CAN");
+        Console.WriteLine("6. UEFA Champions League");
+        Console.WriteLine("7. Exit");
     }
 
     // Main method to execute the program
@@ -58,6 +60,18 @@ public class MainForm
                     break;
 
                 case "5":
+                    Console.WriteLine("Option 5.");
+                    GoalLive.Net.CAN.CanForm.MainForm();
+                    Console.Clear();
+                    break;
+
+                case "6":
+                    Console.WriteLine("Option 6.");
+                    GoalLive.Net.UEFAChampionsLeague.UCLForm.MainForm();
+                    Console.Clear();
+                    break;
+
+                case "7":
                     exit = true;
                     Console.WriteLine("Leaving the program...");
                     break;

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GoalLive.Net")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e487d6d8368f2577298ee73f1b9d8f3c64967da7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8658ed1e76074b68e41a88512904c4f4bf835e2a")]
 [assembly: System.Reflection.AssemblyProductAttribute("GoalLive.Net")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GoalLive.Net")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
